@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="12.0.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+        <PackageReference Include="CoreX.Extensions.Http" Version="1.5.0" />
+        <PackageReference Include="Keycloak.AuthServices.Authentication" Version="1.5.1" />
+        <PackageReference Include="Keycloak.AuthServices.Authorization" Version="1.5.1" />
+        <PackageReference Include="MediatR" Version="12.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Mappings" />
+        <Folder Include="UCaller\Cache" />
+        <Folder Include="UCaller\Constants" />
+        <Folder Include="UCaller\Features\Commands" />
+        <Folder Include="UCaller\Features\Queries" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Infrastructure\Resources\Ark.Infrastructure.Resources.csproj" />
+        <ProjectReference Include="..\Application\Ark.IdentityServer.Application.csproj" />
+        <ProjectReference Include="..\DomainServices\Ark.IdentityServer.DomainServices.csproj" />
+        <ProjectReference Include="..\Domain\Ark.IdentityServer.Domain.csproj" />
+        <ProjectReference Include="..\Persistence\Ark.IdentityServer.Persistence.csproj" />
+    </ItemGroup>
+
+</Project>

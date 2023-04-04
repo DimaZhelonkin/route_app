@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="EventHandlers"/>
+        <Folder Include="Mappings"/>
+        <Folder Include="Features"/>
+        <Folder Include="Contracts"/>
+        <Folder Include="Extensions"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="12.0.1"/>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0"/>
+
+        <PackageReference Include="MediatR" Version="12.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Application\Ark.Account.Application.csproj"/>
+        <ProjectReference Include="..\DomainServices\Ark.Account.DomainServices.csproj"/>
+        <ProjectReference Include="..\Domain\Ark.Account.Domain.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="3.0.0"/>
+    </ItemGroup>
+
+</Project>

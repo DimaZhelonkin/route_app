@@ -1,0 +1,57 @@
+﻿<root>
+    <data name="DriverRide__Could_Not_Be_Created" xml:space="preserve">
+        <value>Driver ride could not be created</value>
+    </data>
+    <data name="Id__Should_Not_Be_Default" xml:space="preserve">
+        <value>Id should not be default</value>
+    </data>
+    <data name="RouteId__Should_Not_Be_Default" xml:space="preserve">
+        <value>RouteId should not be default</value>
+    </data>
+    <data name="VehicleId__Should_Not_Be_Default" xml:space="preserve">
+        <value>VehicleId should not be default</value>
+    </data>
+    <data name="Driver__Should_Not_Be_Null" xml:space="preserve">
+        <value>Driver should not be null</value>
+    </data>
+
+    <data name="Should_Not_Be_Started" xml:space="preserve">
+        <value>Driver ride should not be started</value>
+    </data>
+    <data name="Status__Should_Be_Started" xml:space="preserve">
+        <value>Driver ride status should be Started or OnTheWay</value>
+    </data>
+    <data name="Status__Should_Not_Be_Started" xml:space="preserve">
+        <value>Driver ride status should not be started</value>
+    </data>
+    <data name="StartedAt__Should_Be_Installed" xml:space="preserve">
+        <value>Driver ride start date should be installed</value>
+    </data>
+    <data name="StartedAt__Should_Not_Be_Installed" xml:space="preserve">
+        <value>Driver ride start date should not be installed</value>
+    </data>
+
+    <data name="DriverRide__Could_Not_Be_Finished" xml:space="preserve">
+        <value>Driver ride could not be finished</value>
+    </data>
+    <data name="Should_Not_Be_Finished" xml:space="preserve">
+        <value>Driver ride should not be finished</value>
+    </data>
+    <data name="Status__Should_Not_Be_Finished" xml:space="preserve">
+        <value>Driver ride status should not be finished</value>
+    </data>
+    <data name="FinishedAt__Should_Not_Be_Installed" xml:space="preserve">
+        <value>Driver ride finish date should not be installed</value>
+    </data>
+
+    <data name="Should_Not_Be_Cancelled" xml:space="preserve">
+        <value>Driver ride should not be cancelled</value>
+    </data>
+    <data name="Status__Should_Not_Be_Cancelled" xml:space="preserve">
+        <value>Driver ride status should not be cancelled</value>
+    </data>
+    <data name="CanceledAt__Should_Not_Be_Installed" xml:space="preserve">
+        <value>Driver ride cancel date should not be installed</value>
+    </data>
+
+</root>

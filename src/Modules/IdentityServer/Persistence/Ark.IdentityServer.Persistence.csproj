@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+        <Folder Include="Mappings"/>
+        <Folder Include="DataSeeding"/>
+        <Folder Include="Caching"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="12.0.1"/>
+        <PackageReference Include="MediatR" Version="12.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\SharedLib\Persistence\Ark.SharedLib.Persistence.csproj"/>
+        <ProjectReference Include="..\Application\Ark.IdentityServer.Application.csproj"/>
+        <ProjectReference Include="..\DomainServices\Ark.IdentityServer.DomainServices.csproj"/>
+    </ItemGroup>
+</Project>

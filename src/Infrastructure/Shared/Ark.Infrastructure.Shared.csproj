@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MassTransit" Version="8.0.12"/>
+        <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0"/>
+        <PackageReference Include="SixLabors.ImageSharp" Version="1.0.4"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0"/>
+        <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.24"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\SharedLib\Common\Ark.SharedLib.Common.csproj"/>
+        <ProjectReference Include="..\..\SharedLib\Application\Ark.SharedLib.Application.csproj"/>
+        <ProjectReference Include="..\Resources\Ark.Infrastructure.Resources.csproj"/>
+        <ProjectReference Include="..\Infrastructure\Ark.Infrastructure.csproj"/>
+    </ItemGroup>
+
+</Project>

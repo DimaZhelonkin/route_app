@@ -1,0 +1,79 @@
+version: '3.8'
+services:
+  application-db:
+    image: postgis/postgis:15-3.3-alpine
+    restart: unless-stopped
+  
+  routing-db:
+    image: postgis/postgis:15-3.3-alpine
+    restart: unless-stopped
+
+  event-store-db:
+    image: postgres:15.1-alpine
+    restart: unless-stopped
+  
+  identity_server-db:
+    image: postgres:14.1-alpine
+    restart: unless-stopped
+  
+  keycloak-db:
+    image: postgres:14.1-alpine
+    restart: unless-stopped
+  
+  keycloak:
+    image: jboss/keycloak:${KEYCLOAK_VERSION}
+    restart: unless-stopped
+    depends_on:
+      - keycloak-db
+  
+  redis:
+    image: redis:latest
+    #    image: redis:7.0.8-alpine
+    restart: unless-stopped
+  
+  hangfire-db:
+    image: postgres:14.1-alpine
+    restart: unless-stopped
+    #    
+    #  logstash:
+    #    image: docker.elastic.co/logstash/logstash:8.6.2
+  
+  rabbitmq:
+    image: rabbitmq:3.11.9-management-alpine
+    restart: unless-stopped
+  
+  prometheus:
+    image: prom/prometheus
+  
+  seq:
+    image: datalust/seq:latest
+    
+  api:
+    image: ${DOCKER_REGISTRY-}ark-api
+    build:
+      context: src/
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - application-db
+      - routing-db
+      - event-store-db
+      - identity_server-db
+      - keycloak-db
+      - keycloak
+      - rabbitmq
+      
+  identity-server-app:
+    image: ${DOCKER_REGISTRY-}identity-server-app
+    build:
+      context: src/
+      dockerfile: IdentityServer.Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - identity_server-db
+      - keycloak-db
+      - keycloak
+      - rabbitmq
+      - hangfire-db
+    #    networks:
+    #      - app-dev

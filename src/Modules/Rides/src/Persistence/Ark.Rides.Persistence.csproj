@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="Caching" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\..\SharedLib\Persistence\Ark.SharedLib.Persistence.csproj" />
+        <ProjectReference Include="..\Application\Ark.Rides.Application.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="NetTopologySuite" Version="2.5.0" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="7.0.3" />
+    </ItemGroup>
+</Project>

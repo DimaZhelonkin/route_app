@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="EventHandlers"/>
+        <Folder Include="Mappings"/>
+        <Folder Include="Features"/>
+        <Folder Include="Services"/>
+        <Folder Include="Contracts"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Application\Ark.Core.Application.csproj"/>
+        <ProjectReference Include="..\DomainServices\Ark.Core.DomainServices.csproj"/>
+        <ProjectReference Include="..\Domain\Ark.Core.Domain.csproj"/>
+    </ItemGroup>
+
+
+</Project>

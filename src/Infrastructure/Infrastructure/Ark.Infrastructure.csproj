@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="Models\Read\**" />
+        <EmbeddedResource Remove="Models\Read\**" />
+        <None Remove="Models\Read\**" />
+        <Compile Remove="Extensions\QuerySpecificationExtensions.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Ardalis.GuardClauses" Version="4.0.1" />
+        <PackageReference Include="AutoMapper" Version="12.0.1" />
+        <PackageReference Include="AutoMapper.Extensions.ExpressionMapping" Version="6.0.3" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+        <PackageReference Include="Hangfire.AspNetCore" Version="1.7.33" />
+        <PackageReference Include="Hangfire.Core" Version="1.7.33" />
+        <PackageReference Include="Hangfire.PostgreSql" Version="1.9.10" />
+        <PackageReference Include="MassTransit.Analyzers" Version="8.0.13">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.12" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.3" />
+        <PackageReference Include="Polly" Version="7.2.3" />
+        <PackageReference Include="Polly.Extensions.Http" Version="3.0.0" />
+        <PackageReference Include="Quartz" Version="3.6.0" />
+        <PackageReference Include="Quartz.Extensions.DependencyInjection" Version="3.6.0" />
+        <PackageReference Include="Quartz.Extensions.Hosting" Version="3.6.0" />
+        <PackageReference Include="Scrutor" Version="4.2.1" />
+        <PackageReference Include="Storage.Net" Version="9.3.0" />
+        <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.24" />
+        <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Modules\IdentityServer\Domain\Ark.IdentityServer.Domain.csproj" />
+        <ProjectReference Include="..\..\SharedLib\Application\Ark.SharedLib.Application.csproj" />
+        <ProjectReference Include="..\..\SharedLib\Common\Ark.SharedLib.Common.csproj" />
+        <ProjectReference Include="..\..\SharedLib\Domain\Ark.SharedLib.Domain.csproj" />
+        <ProjectReference Include="..\Resources\Ark.Infrastructure.Resources.csproj" />
+    </ItemGroup>
+
+</Project>

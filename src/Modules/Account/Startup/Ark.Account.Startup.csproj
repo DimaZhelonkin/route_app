@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Infrastructure\Infrastructure\Ark.Infrastructure.csproj"/>
+        <ProjectReference Include="..\Backoffice\Ark.Account.Backoffice.csproj"/>
+        <ProjectReference Include="..\DomainServices\Ark.Account.DomainServices.csproj"/>
+        <ProjectReference Include="..\Infrastructure\Ark.Account.Infrastructure.csproj"/>
+        <ProjectReference Include="..\Persistence\Ark.Account.Persistence.csproj"/>
+    </ItemGroup>
+
+</Project>

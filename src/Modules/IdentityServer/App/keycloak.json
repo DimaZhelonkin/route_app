@@ -1,0 +1,10 @@
+﻿{
+  "realm": "ArkSystems",
+  "auth-server-url": "http://localhost:48080/auth/",
+  "ssl-required": "external",
+  "resource": "ark-api",
+  "credentials": {
+    "secret": "pHdXCsB4Aq4vJ9ikavHwUQDHXhdFL4tB"
+  },
+  "confidential-port": 0
+}

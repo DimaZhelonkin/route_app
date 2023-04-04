@@ -1,0 +1,9 @@
+﻿<Project>
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Ark.Core</RootNamespace>
+    </PropertyGroup>
+</Project>

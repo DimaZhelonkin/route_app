@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="EventHandlers" />
+        <Folder Include="Events" />
+        <Folder Include="Features\Common\Queries" />
+        <Folder Include="Mappings" />
+        <Folder Include="Validators" />
+        <Folder Include="Exceptions" />
+        <Folder Include="Behaviours" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\..\SharedLib\Application\Ark.SharedLib.Application.csproj" />
+        <ProjectReference Include="..\..\..\..\SharedLib\Common\Ark.SharedLib.Common.csproj" />
+        <ProjectReference Include="..\..\..\Core\Application\Ark.Core.Application.csproj" />
+        <ProjectReference Include="..\..\..\Routing\Application\Ark.Routing.Application.csproj" />
+        <ProjectReference Include="..\..\..\Vehicles\Application\Ark.Vehicles.Application.csproj" />
+        <ProjectReference Include="..\DomainServices\Ark.Rides.DomainServices.csproj" />
+        <ProjectReference Include="..\Domain\Ark.Rides.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+        <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="7.0.3" />
+    </ItemGroup>
+
+</Project>

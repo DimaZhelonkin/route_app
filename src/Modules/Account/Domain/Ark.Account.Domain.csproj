@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="Events" />
+        <Folder Include="ValueObjects" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\SharedLib\Domain\Ark.SharedLib.Domain.csproj" />
+        <ProjectReference Include="..\..\IdentityServer\Domain\Ark.IdentityServer.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" Version="11.5.0" />
+        <PackageReference Include="NetTopologySuite" Version="2.5.0" />
+    </ItemGroup>
+</Project>

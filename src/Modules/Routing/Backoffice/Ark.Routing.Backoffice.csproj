@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="Features\Commands" />
+        <Folder Include="Validators" />
+        <Folder Include="Controllers" />
+        <Folder Include="Extensions" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Infrastructure\Shared\Ark.Infrastructure.Shared.csproj" />
+        <ProjectReference Include="..\..\Core\Application\Ark.Core.Application.csproj" />
+        <ProjectReference Include="..\Application\Ark.Routing.Application.csproj" />
+    </ItemGroup>
+
+</Project>

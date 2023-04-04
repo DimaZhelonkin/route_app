@@ -1,0 +1,12 @@
+﻿namespace Ark.SharedLib.Domain.Models;
+
+public sealed class OutboxMessage
+{
+    public Guid Id { get; init; }
+    public string Type { get; set; } = string.Empty;
+    public string Content { get; set; } = string.Empty;
+    public DateTimeOffset OccurredOnUtc { get; set; }
+    public DateTimeOffset? ProcessedOnUtc { get; set; }
+    public DateTimeOffset? PublishedOnUtc { get; set; }
+    public string? Error { get; set; }
+}

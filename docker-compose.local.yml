@@ -1,0 +1,205 @@
+﻿version: '3.8'
+services:
+  application-db:
+    extends:
+      file: docker-compose.yml
+      service: application-db
+    container_name: application-db
+    environment:
+      - POSTGRES_USER=${APPLICATION_DB_USER}
+      - POSTGRES_PASSWORD=${APPLICATION_DB_PASSWORD}
+    ports:
+      - '45433:5432'
+    volumes:
+      - application-db_data:/var/lib/postgresql/data
+
+  event-store-db:
+    extends:
+      file: docker-compose.yml
+      service: event-store-db
+    container_name: event-store-db
+    environment:
+      - POSTGRES_USER=${EVENT_STORE_DB_USER}
+      - POSTGRES_PASSWORD=${EVENT_STORE_DB_PASSWORD}
+    ports:
+      - '45434:5432'
+    volumes:
+      - event-store-db_data:/var/lib/postgresql/data
+
+  routing-db:
+    extends:
+      file: docker-compose.yml
+      service: routing-db
+    container_name: routing-db
+    environment:
+      - POSTGRES_USER=${APPLICATION_DB_USER}
+      - POSTGRES_PASSWORD=${APPLICATION_DB_PASSWORD}
+    ports:
+      - '45435:5432'
+    volumes:
+      - routing-db_data:/var/lib/postgresql/data
+
+  identity_server-db:
+    extends:
+      file: docker-compose.yml
+      service: identity_server-db
+    container_name: identity_server-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '45436:5432'
+    volumes:
+      - identity_server-db_data:/var/lib/postgresql/data
+  
+  keycloak-db:
+    extends:
+      file: docker-compose.yml
+      service: keycloak-db
+    container_name: keycloak-db
+    environment:
+      - POSTGRES_DB=${KEYCLOAK_POSTGRESQL_DB}
+      - POSTGRES_USER=${KEYCLOAK_POSTGRESQL_USER}
+      - POSTGRES_PASSWORD=${KEYCLOAK_POSTGRESQL_PASSWORD}
+    ports:
+      - '45437:5432'
+    volumes:
+      - keycloak-db_data:/var/lib/postgresql/data
+  
+  keycloak:
+    extends:
+      file: docker-compose.yml
+      service: keycloak
+    container_name: keycloak
+    environment:
+      DB_VENDOR: postgres
+      DB_ADDR: keycloak-db
+      DB_DATABASE: ${KEYCLOAK_POSTGRESQL_DB}
+      DB_USER: ${KEYCLOAK_POSTGRESQL_USER}
+      DB_PASSWORD: ${KEYCLOAK_POSTGRESQL_PASSWORD}
+      KEYCLOAK_USER: ${KEYCLOAK_USER}
+      KEYCLOAK_PASSWORD: ${KEYCLOAK_PASSWORD}
+    #      KEYCLOAK_IMPORT: /tmp/keycloak/realm-authz.json
+    ports:
+      - "48080:8080"
+    volumes:
+      - ./containers/keycloak:/tmp/keycloak
+  #    networks:
+  #      - local-keycloak
+  
+  redis:
+    extends:
+      file: docker-compose.yml
+      service: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+  
+  hangfire-db:
+    extends:
+      file: docker-compose.yml
+      service: hangfire-db
+    container_name: hangfire-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '41434:5432'
+    volumes:
+      #      - ./containers/hangfire-db/data:/var/lib/postgresql/data
+      - hangfire-db_data:/var/lib/postgresql/data
+  
+  rabbitmq:
+    extends:
+      file: docker-compose.yml
+      service: rabbitmq
+    container_name: rabbitmq
+    hostname: ark-rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+      - RABBITMQ_DEFAULT_VHOST=${RABBITMQ_DEFAULT_VHOST}
+    ports:
+      # AMQP protocol port
+      - "5673:5672"
+      # HTTP management UI
+      - "15673:15672"
+    volumes:
+      #      - ~/.containers/rabbitmq/data/:/var/lib/rabbitmq/
+      #      - ~/.containers/rabbitmq/log/:/var/log/rabbitmq
+      - rabbitmq_data:/var/lib/rabbitmq/
+      - rabbitmq_log:/var/log/rabbitmq
+  
+  prometheus:
+    extends:
+      file: docker-compose.yml
+      service: prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+      
+  seq:
+    extends:
+      file: docker-compose.yml
+      service: seq
+    container_name: seq
+    ports:
+      - '5341:80'
+    environment:
+      - ACCEPT_EULA=Y
+      
+  api:
+    extends:
+      file: docker-compose.yml
+      service: api
+    container_name: api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_HTTPS_PORT=40443
+    volumes:
+      - ~/.aspnet/https:/https:ro
+    ports:
+      - "40443:443"
+      - "40080:80"
+      
+  identity-server-app:
+    extends:
+      file: docker-compose.yml
+      service: identity-server-app
+    container_name: identity-server-app
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_HTTPS_PORT=40444
+    volumes:
+      - ~/.aspnet/https:/https:ro
+    ports:
+      - "40444:443"
+      - "40084:80"
+#    volumes:
+#      - ~/.aspnet/https:/https:ro
+##      - src/Api/bin/Debug/net7.0/:/app
+#      - src\Api\bin\Debug\net7.0:\test
+
+volumes:
+  application-db_data:
+    driver: local
+  event-store-db_data:
+    driver: local
+  identity_server-db_data:
+    driver: local
+  routing-db_data:
+    driver: local
+  keycloak-db_data:
+    driver: local
+  hangfire-db_data:
+    driver: local
+  rabbitmq_data:
+    driver: local
+  rabbitmq_log:
+    driver: local

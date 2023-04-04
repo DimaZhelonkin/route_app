@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Astrum.IdentityServer.Startup</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Application\Ark.IdentityServer.Application.csproj"/>
+        <ProjectReference Include="..\Backoffice\Ark.IdentityServer.Backoffice.csproj"/>
+        <ProjectReference Include="..\DomainServices\Ark.IdentityServer.DomainServices.csproj"/>
+        <ProjectReference Include="..\Infrastructure\Ark.IdentityServer.Infrastructure.csproj"/>
+        <ProjectReference Include="..\Persistence\Ark.IdentityServer.Persistence.csproj"/>
+    </ItemGroup>
+</Project>

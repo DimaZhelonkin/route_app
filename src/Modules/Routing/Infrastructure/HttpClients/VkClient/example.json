@@ -1,0 +1,480 @@
+﻿{
+  "trips": [
+    {
+      "trip": {
+        "locations": [
+          {
+            "type": "break",
+            "lat": 55.796932,
+            "lon": 37.537849,
+            "heading": 150,
+            "side_of_street": "left",
+            "original_index": 0
+          },
+          {
+            "type": "via",
+            "lat": 55.865625,
+            "lon": 37.46229,
+            "original_index": 1
+          },
+          {
+            "type": "break",
+            "lat": 55.962139,
+            "lon": 37.406377,
+            "original_index": 2
+          }
+        ],
+        "legs": [
+          {
+            "nodes": [
+              {
+                "type": "camera",
+                "camera_type": "speed",
+                "shape_index": 12,
+                "speed": 60
+              },
+              {
+                "type": "camera",
+                "camera_type": "speed",
+                "shape_index": 53,
+                "speed": 60
+              },
+              {
+                "type": "camera",
+                "camera_type": "speed",
+                "shape_index": 65,
+                "speed": 60
+              },
+              {
+                "type": "camera",
+                "camera_type": "speed",
+                "shape_index": 96,
+                "speed": 80
+              },
+              {
+                "type": "camera",
+                "camera_type": "speed",
+                "shape_index": 116,
+                "speed": 80
+              },
+              {
+                "type": "camera",
+                "camera_type": "speed",
+                "shape_index": 138,
+                "speed": 80
+              },
+              {
+                "type": "camera",
+                "camera_type": "speed",
+                "shape_index": 145,
+                "speed": 80
+              },
+              {
+                "type": "camera",
+                "camera_type": "speed",
+                "shape_index": 153,
+                "speed": 80
+              },
+              {
+                "type": "camera",
+                "camera_type": "speed",
+                "shape_index": 273,
+                "speed": 80
+              },
+              {
+                "type": "camera",
+                "camera_type": "speed",
+                "shape_index": 292,
+                "speed": 80
+              }
+            ],
+            "maneuvers": [
+              {
+                "type": 3,
+                "instruction": "Двигайтесь на северо-восток.",
+                "verbal_succinct_transition_instruction": "Двигайтесь на северо-запад., затем Поверните направо на Ленинградский проспект.",
+                "verbal_pre_transition_instruction": "Двигайтесь на северо-запад., затем Поверните направо на Ленинградский проспект.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 50 метров.",
+                "time": 13.92,
+                "length": 0.048,
+                "cost": 358.524,
+                "begin_shape_index": 0,
+                "end_shape_index": 3,
+                "verbal_multi_cue": true,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 10,
+                "instruction": "Поверните направо на Ленинградский проспект.",
+                "verbal_transition_alert_instruction": "Поверните направо на Ленинградский проспект.",
+                "verbal_succinct_transition_instruction": "Поверните направо.",
+                "verbal_pre_transition_instruction": "Поверните направо на Ленинградский проспект.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 600 метров.",
+                "street_names": [
+                  "Ленинградский проспект"
+                ],
+                "time": 37.991,
+                "length": 0.594,
+                "cost": 77.384,
+                "begin_shape_index": 3,
+                "end_shape_index": 12,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 13,
+                "instruction": "Развернитесь налево, чтобы остаться на Ленинградский проспект.",
+                "verbal_transition_alert_instruction": "Развернитесь налево, чтобы остаться на Ленинградский проспект.",
+                "verbal_succinct_transition_instruction": "Развернитесь налево.",
+                "verbal_pre_transition_instruction": "Развернитесь налево, чтобы остаться на Ленинградский проспект.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 10 километров.",
+                "street_names": [
+                  "Ленинградский проспект"
+                ],
+                "time": 583.094,
+                "length": 10.373,
+                "cost": 684.132,
+                "begin_shape_index": 12,
+                "end_shape_index": 166,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 23,
+                "instruction": "Держитесь правой стороны на развилке.",
+                "verbal_transition_alert_instruction": "Держитесь правой стороны на развилке.",
+                "verbal_pre_transition_instruction": "Держитесь правой стороны на развилке.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 400 метров.",
+                "time": 30.582,
+                "length": 0.378,
+                "cost": 43.634,
+                "begin_shape_index": 166,
+                "end_shape_index": 176,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 15,
+                "instruction": "Поверните налево на Прибрежный проезд.",
+                "verbal_transition_alert_instruction": "Поверните налево на Прибрежный проезд.",
+                "verbal_succinct_transition_instruction": "Поверните налево.",
+                "verbal_pre_transition_instruction": "Поверните налево на Прибрежный проезд.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 400 метров.",
+                "street_names": [
+                  "Прибрежный проезд"
+                ],
+                "time": 40.611,
+                "length": 0.435,
+                "cost": 78.582,
+                "begin_shape_index": 176,
+                "end_shape_index": 198,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 9,
+                "instruction": "Поверните направо на Ленинградское шоссе.",
+                "verbal_transition_alert_instruction": "Поверните направо на Ленинградское шоссе.",
+                "verbal_succinct_transition_instruction": "Поверните направо., затем через 300 метров, Поверните направо.",
+                "verbal_pre_transition_instruction": "Поверните направо на Ленинградское шоссе., затем через 300 метров, Поверните направо.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 300 метров.",
+                "street_names": [
+                  "Ленинградское шоссе"
+                ],
+                "time": 13.045,
+                "length": 0.289,
+                "cost": 34.18,
+                "begin_shape_index": 198,
+                "end_shape_index": 202,
+                "verbal_multi_cue": true,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 9,
+                "instruction": "Поверните направо.",
+                "verbal_transition_alert_instruction": "Поверните направо.",
+                "verbal_succinct_transition_instruction": "Поверните направо., затем через 50 метров, Поверните направо.",
+                "verbal_pre_transition_instruction": "Поверните направо., затем через 50 метров, Поверните направо.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 50 метров.",
+                "time": 13.145,
+                "length": 0.05,
+                "cost": 95.307,
+                "begin_shape_index": 202,
+                "end_shape_index": 204,
+                "verbal_multi_cue": true,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 9,
+                "instruction": "Поверните направо.",
+                "verbal_transition_alert_instruction": "Поверните направо.",
+                "verbal_succinct_transition_instruction": "Поверните направо.",
+                "verbal_pre_transition_instruction": "Поверните направо.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 100 метров.",
+                "time": 62.358,
+                "length": 0.123,
+                "cost": 759.427,
+                "begin_shape_index": 204,
+                "end_shape_index": 216,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 10,
+                "instruction": "Поверните направо.",
+                "verbal_transition_alert_instruction": "Поверните направо.",
+                "verbal_succinct_transition_instruction": "Поверните направо.",
+                "verbal_pre_transition_instruction": "Поверните направо.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 100 метров.",
+                "time": 40.498,
+                "length": 0.127,
+                "cost": 38.587,
+                "begin_shape_index": 216,
+                "end_shape_index": 220,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 15,
+                "instruction": "Поверните налево.",
+                "verbal_transition_alert_instruction": "Поверните налево.",
+                "verbal_succinct_transition_instruction": "Поверните налево., затем Поверните направо на Ленинградское шоссе.",
+                "verbal_pre_transition_instruction": "Поверните налево., затем Поверните направо на Ленинградское шоссе.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 20 метров.",
+                "time": 13.715,
+                "length": 0.018,
+                "cost": 25.645,
+                "begin_shape_index": 220,
+                "end_shape_index": 221,
+                "verbal_multi_cue": true,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 10,
+                "instruction": "Поверните направо на Ленинградское шоссе/Leningrad Avenue.",
+                "verbal_transition_alert_instruction": "Поверните направо на Ленинградское шоссе.",
+                "verbal_succinct_transition_instruction": "Поверните направо., затем Выезжайте на кольцевую развязку и сверните на 3-м съезде на Беломорская улица.",
+                "verbal_pre_transition_instruction": "Поверните направо на Ленинградское шоссе, Leningrad Avenue., затем Выезжайте на кольцевую развязку и сверните на 3-м съезде на Беломорская улица.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 80 метров.",
+                "street_names": [
+                  "Ленинградское шоссе",
+                  "Leningrad Avenue"
+                ],
+                "time": 5.75,
+                "length": 0.081,
+                "cost": 25.96,
+                "begin_shape_index": 221,
+                "end_shape_index": 223,
+                "verbal_multi_cue": true,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 26,
+                "instruction": "Выезжайте на кольцевую развязку и сверните на 3-м съезде на Беломорская улица.",
+                "verbal_transition_alert_instruction": "Выезжайте на кольцевую развязку и сверните на 3-м съезде на Беломорская улица.",
+                "verbal_succinct_transition_instruction": "Выезжайте на кольцевую развязку и сверните на 3-м съезде.",
+                "verbal_pre_transition_instruction": "Выезжайте на кольцевую развязку и сверните на 3-м съезде на Беломорская улица.",
+                "time": 27.179,
+                "length": 0.255,
+                "cost": 14.539,
+                "begin_shape_index": 223,
+                "end_shape_index": 242,
+                "roundabout_exit_count": 3,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 27,
+                "instruction": "Сверните с кольцевой развязки на Беломорская улица.",
+                "verbal_succinct_transition_instruction": "Сверните с кольцевой развязки.",
+                "verbal_pre_transition_instruction": "Сверните с кольцевой развязки на Беломорская улица.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 200 метров.",
+                "street_names": [
+                  "Беломорская улица"
+                ],
+                "time": 22.854,
+                "length": 0.189,
+                "cost": 33.484,
+                "begin_shape_index": 242,
+                "end_shape_index": 248,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 20,
+                "instruction": "Сверните на съезд на Ленинградское шоссе.",
+                "verbal_transition_alert_instruction": "Сверните на съезд на Ленинградское шоссе.",
+                "verbal_pre_transition_instruction": "Сверните на съезд на Ленинградское шоссе.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 8 километров.",
+                "street_names": [
+                  "Ленинградское шоссе"
+                ],
+                "time": 442.903,
+                "length": 8.057,
+                "cost": 505.969,
+                "begin_shape_index": 248,
+                "end_shape_index": 361,
+                "sign": {
+                  "exit_branch_elements": [
+                    {
+                      "text": "Ленинградское шоссе"
+                    }
+                  ]
+                },
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 23,
+                "instruction": "Держитесь правой стороны к Шереметьево-2.",
+                "verbal_transition_alert_instruction": "Держитесь правой стороны к Шереметьево-2.",
+                "verbal_pre_transition_instruction": "Держитесь правой стороны к Шереметьево-2.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 600 метров.",
+                "street_names": [
+                  "46Н-13925"
+                ],
+                "time": 39.431,
+                "length": 0.591,
+                "cost": 42.097,
+                "begin_shape_index": 361,
+                "end_shape_index": 382,
+                "sign": {},
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 24,
+                "instruction": "Держитесь прямо, чтобы свернуть на 46Н-13925/Международное шоссе.",
+                "verbal_transition_alert_instruction": "Держитесь левой стороны, чтобы свернуть на 46Н-13925.",
+                "verbal_pre_transition_instruction": "Держитесь левой стороны, чтобы свернуть на 46Н-13925, Международное шоссе.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 2,5 километров.",
+                "street_names": [
+                  "46Н-13925",
+                  "Международное шоссе"
+                ],
+                "time": 93.476,
+                "length": 2.654,
+                "cost": 75.352,
+                "begin_shape_index": 382,
+                "end_shape_index": 394,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 24,
+                "instruction": "Держитесь левой стороны, чтобы остаться на 46Н-13925/Международное шоссе.",
+                "verbal_transition_alert_instruction": "Держитесь левой стороны, чтобы остаться на 46Н-13925.",
+                "verbal_pre_transition_instruction": "Держитесь левой стороны, чтобы остаться на 46Н-13925, Международное шоссе.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 1,5 километров.",
+                "street_names": [
+                  "46Н-13925",
+                  "Международное шоссе"
+                ],
+                "time": 58.283,
+                "length": 1.254,
+                "cost": 50.072,
+                "begin_shape_index": 394,
+                "end_shape_index": 413,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 24,
+                "instruction": "Держитесь прямо к Шереметьево/ Терминал D.",
+                "verbal_transition_alert_instruction": "Держитесь левой стороны к Шереметьево.",
+                "verbal_pre_transition_instruction": "Держитесь левой стороны к Шереметьево,  Терминал D.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 500 метров.",
+                "time": 33.139,
+                "length": 0.46,
+                "cost": 41.839,
+                "begin_shape_index": 413,
+                "end_shape_index": 423,
+                "sign": {},
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 23,
+                "instruction": "Держитесь правой стороны на развилке.",
+                "verbal_transition_alert_instruction": "Держитесь правой стороны на развилке.",
+                "verbal_pre_transition_instruction": "Держитесь правой стороны на развилке.",
+                "verbal_post_transition_instruction": "Продолжайте движение еще 600 метров.",
+                "time": 47.891,
+                "length": 0.61,
+                "cost": 378.974,
+                "begin_shape_index": 423,
+                "end_shape_index": 449,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              },
+              {
+                "type": 4,
+                "instruction": "Вы прибыли в пункт назначения.",
+                "verbal_transition_alert_instruction": "Вы прибудете в пункт назначения.",
+                "verbal_pre_transition_instruction": "Вы прибыли в пункт назначения.",
+                "time": 0.0,
+                "length": 0.0,
+                "cost": 0.0,
+                "begin_shape_index": 449,
+                "end_shape_index": 449,
+                "travel_mode": "drive",
+                "travel_type": "car"
+              }
+            ],
+            "summary": {
+              "cost": 3363.697,
+              "ll_bboxes": [
+                {
+                  "min_lat": 55.79378,
+                  "max_lat": 55.962686,
+                  "min_lon": 37.39366,
+                  "max_lon": 37.546925
+                }
+              ],
+              "time": 1733.264,
+              "length": 26.588
+            },
+            "shape": "ydqliBeqcrfA_KyO_AyA{EsHv^aeA~FkPl[g_Ad[q~@nO}d@bt@stBtM}_@`CiHvUmr@zAsF\\yEBcEKyDg@sDgAcDgKyPaBsA_Bc@iBEuBj@oBjBoDhFuOhf@mWlu@kCzH}d@`tA}f@fxAwTlo@mk@`bBuU|q@sKh[uCnIcAtCoGlTwTzu@aDlJm}@xoC{Ujq@{Off@{Kj\\mAnDyGpUuFxQoHv]wGz]mGj_@qFr^mHrf@o^nyBiLzr@}SdkAeO`z@{BhMgK`p@wG`i@ka@pmC{QphAwPbtAmQpwAoGfe@mFt^c`@r`C_I|e@aUfuAsJjl@wGn`@qDbSgDfPsCxLsEjPmDnKmFvNmBvFQj@eIjPcGjLyFnJiEvGeE~FeEjFiFvFwFhFaEjDiEbDy{@pn@aRpNwfD~gCag@x_@WRalBxxA}n@vf@qlCzoBcBhAic@b\\oqDfnCmc@|Zqj@b^}b@p[snAp~@u|@dq@}jAjbAs`@j^ii@pc@kGhFmmAv`A{a@n[kXpTiXnTmv@|k@}a@n[iMtJ{QjNab@x[aMxJyaAzv@qjAp|@alAf|@arC~mBqbAdr@{fBtiAoFjDad@rYak@t^aQxKsy@vf@{e@|Xwo@l`@gnA|v@oo@f`@{gAbq@qx@pf@uk@r^}cBzcAup@|`@sf@hZs^xTkiAls@m_Avj@ie@xXyRtLcQlK_h@h[yLnHcTzMkv@xc@{q@pa@a\\vRmm@f_@kAt@{WdQ_[tRa@T_h@p[qNjIcBbAehAhp@wh@v[mV|Ncu@lc@oj@t]_StLs\\dS{VfOcADkHVcs@dPsRlEs\\~F}GnBoFlCmFlDiJ|Jyq@rw@xBrMjDxN`FrOdShm@jAdC`CnBfCl@~CKfF_BhRmI|FiEvAcBpDcE|F_ItKiLtH{KhGyOhTar@z@oCbFkSlCuHnE}IjAy@jNmJzu@ke@xlAiv@tT~@rEQlAdARPxCtCvC|KrA~JvAlAzLmHf@kDmB}N@_FsAyJWmBlOuJh]ySpJ_GdGwDqByOh\\_SbLyG`Hq@`ET`Dd@xCx@pnAn\\dCfA|@x@d@Fx@Kv@u@t@qBb@{CPoDAgEUeDg@{Ci@_C_AaCc@YuAgFcAaIcEyb@}Eme@eDm\\iIaz@k@eP?aEfAuHlCgGnByBfBiAlAWbCMxCn@|GjF`E~KfFbNlA`DxC`I`GrOdEtMXpCLdC?rCK|C_@lCaBnF}B`DkAt@{WdQ_[tRa@T_h@p[qNjIcBbAehAhp@wh@v[mV|Ncu@lc@oj@t]_StLs\\dS{VfOyI~EcWhOaOjJ}`@j[aKtKk\\|]aW`]kVd_@gGhJyo@ddAsdCrwDw[jj@idApzA{|@rkAgZj_@_ApAsvAzdB}^~c@qi@pq@}pArbBy@fA_n@vx@qFdHy@dAmzA`rB_I`LoUj[GH_TnYuc@lo@{o@||@gc@rl@_e@xo@qb@pl@y_@bi@wPlTmh@hs@qSbXak@xt@mThZkaAxrAst@bbAaqBzlCcMfQssAveBczAprByw@|dA{z@ziAoc@pj@}m@v{@ucAhvAiBbCq^`f@}^fh@kYdc@yNrUsaAxdBeFjI}JzQqOfX}n@fhAo{ArmC__BxrCgp@reA{fA`fBwYhd@}d@|s@qq@bfAyPfXmh@py@mnCllEiTd]}b@bq@_mBtyC_n@v_AoHfHqGlEgNrGyS|K{KvFaf@pVyM|G}IzBaG~@sHFcHa@}HqAmIyCqIaEmUmNuRqJ}ScMwCeBuIeFcQgLo[yRu@e@{n@g`@k@_@_vD{_CsnDa|B}WsPahHqpEaBcAegHcpE_i@e\\g`HokEiViOmsBopA{}@_k@sn@oa@uVcM{LqFoEoByQeHwSuGw_@{JwSqCsTiB_U_A}V_@meAj@iv@v@_UTeNNmi@Mcm@h@}e@nBgi@@i|@KaQ]{Nc@{Km@uJu@kMoAef@kH}AMoL{@kD?gDLkEr@oDdBiDjCoDxDqCtEaCtFaCfI}AjIoAxKy@vMkLhsCk@nP]bOIfOV|OVrG`@vGnCfYpCx]nCd]bGfu@nFdq@nAtO"
+          }
+        ],
+        "summary": {
+          "cost": 3363.697,
+          "ll_bboxes": [
+            {
+              "min_lat": 55.79378,
+              "max_lat": 55.962686,
+              "min_lon": 37.39366,
+              "max_lon": 37.546925
+            }
+          ],
+          "time": 1733.264,
+          "length": 26.588
+        },
+        "build_route_time_ms": 41.023,
+        "considered_edges": 68377
+      }
+    }
+  ],
+  "ll_bboxes": [
+    {
+      "min_lat": 55.79378,
+      "max_lat": 55.962686,
+      "min_lon": 37.39366,
+      "max_lon": 37.546925
+    }
+    "language"
+    :
+    "ru-RU",
+    "id"
+    :
+    "route_to_airport"
+    }
+  ],
+  "status_message": "Found 1 route(s) between points",
+  "status": 0,
+  "units": "kilometers",

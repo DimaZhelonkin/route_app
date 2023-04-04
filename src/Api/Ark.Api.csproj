@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <UserSecretsId>8018e338-382a-47fc-b6e7-540e5506ae3f</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageId>Ark.Api</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="logs\**" />
+        <Content Remove="logs\**" />
+        <EmbeddedResource Remove="logs\**" />
+        <None Remove="logs\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Remove="Dockerfile.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Ardalis.RouteAndBodyModelBinding" Version="0.0.2" />
+        <PackageReference Include="AutoMapper" Version="12.0.1" />
+        <PackageReference Include="FluentValidation" Version="11.5.0" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.0" />
+        <PackageReference Include="Hangfire.AspNetCore" Version="1.7.33" />
+        <PackageReference Include="Hangfire.Core" Version="1.7.33" />
+        <PackageReference Include="MediatR" Version="12.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Quartz.Extensions.Hosting" Version="3.6.0" />
+        <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+        <PackageReference Include="Serilog.Settings.Configuration" Version="3.4.0" />
+        <PackageReference Include="Serilog.Enrichers.Environment" Version="2.2.0" />
+        <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+        <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+        <PackageReference Include="Serilog.Sinks.Seq" Version="5.2.2" />
+        <PackageReference Include="Serilog.Sinks.SpectreConsole" Version="0.3.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="HostingServices" />
+        <Folder Include="wwwroot" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Modules\Rides\src\Startup\Ark.Rides.Startup.csproj" />
+        <ProjectReference Include="..\Modules\Vehicles\Startup\Ark.Vehicles.Startup.csproj" />
+        <ProjectReference Include="..\Modules\Account\Startup\Ark.Account.Startup.csproj" />
+        <ProjectReference Include="..\Modules\Routing\Startup\Ark.Routing.Startup.csproj" />
+        <ProjectReference Include="..\SharedLib\Api\Ark.SharedLib.Api.csproj" />
+    </ItemGroup>
+
+</Project>

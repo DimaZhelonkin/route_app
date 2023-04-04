@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworkVersion>7.0</TargetFrameworkVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="Contracts"/>
+        <Folder Include="EventHandlers"/>
+        <Folder Include="Events"/>
+        <Folder Include="Mappings"/>
+        <Folder Include="Models"/>
+        <Folder Include="Repositories"/>
+        <Folder Include="Services"/>
+        <Folder Include="Validators"/>
+        <Folder Include="Exceptions"/>
+        <Folder Include="Extensions"/>
+        <Folder Include="Behaviours"/>
+        <Folder Include="Specifications"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\SharedLib\Application\Ark.SharedLib.Application.csproj"/>
+        <ProjectReference Include="..\..\..\SharedLib\Common\Ark.SharedLib.Common.csproj"/>
+        <ProjectReference Include="..\DomainServices\Ark.Account.DomainServices.csproj"/>
+        <ProjectReference Include="..\Domain\Ark.Account.Domain.csproj"/>
+    </ItemGroup>
+
+
+</Project>
