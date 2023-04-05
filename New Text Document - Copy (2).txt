@@ -2,7 +2,4 @@ docker-compose docker-compose -f docker-compose.local.yamlup
 
 hjklj;lkjn,.lmnkl,mbvm,'plm
 
-lkm/l;k
-
-
-;lknm;lkm
+hjkhjkhjk
